@@ -32,6 +32,7 @@ generateButton.addEventListener("click", async () => {
     const imageElement = document.createElement("img");
     imageElement.classList.add("img_container");
     imageElement.src = imageUrl;
+    imageElement.alt = "Not availble";
     messagesContainer.appendChild(imageElement);
     
     
