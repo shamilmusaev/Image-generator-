@@ -23,23 +23,57 @@ body {
 }
 
 .messages {
-  flex-grow: 1;
-  overflow-y: scroll;
-  padding: 10px 0;
+  
+     flex-grow: 1;
+     overflow-y: scroll;
+     padding: 10px 0;
+     display: flex;
+     flex-direction: column;
 }
 
 .message {
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
+
+  opacity: 0; /* Начальная прозрачность, чтобы скрыть сообщение */
+  transform: translateY(10px); /* Начальное положение для анимации */
+  animation: appearAnimation 1s forwards; /* Применяем анимацию при появлении */
+}
+
+@keyframes appearAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.appear {
+  opacity: 0;
+  transform: translateX(-10px);
+  animation: appearAnimation 2s ease-out forwards;
+}
+
+@keyframes appearAnimation {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 
 .user-message {
   background-color: #007BFF;
   color: white;
-  float: right;
-  min-width: 30%;
+  align-self: flex-end;
   padding: 10px;
   border-radius: 10px;
   margin-right: 10px;
@@ -64,7 +98,7 @@ body {
 .other-message {
   background-color: #EAEAEA;
   min-height: 50px; 
-  width: 80%;
+  align-self: flex-start;
   margin-left: 10px;
   padding: 10px;
   border-radius: 10px;
@@ -87,8 +121,8 @@ body {
 
 .img_container {
   background-color: #EAEAEA;
-  min-height: 50px; 
-  width: 80%;
+  height: 300px; 
+  width: 300px;
   margin-left: 10px;
   padding: 10px;
   border-radius: 10px;
