@@ -73,8 +73,11 @@ document.addEventListener("DOMContentLoaded", async function () {
   const messages = [
     "Hello. Type a prompt and get awesome images 😜",
     "For example ",
-    "Space scene in Van Gogh style",
-    "Cityscape at night in cyberpunk style"
+    "Surreal illustration of Stockholm camera zoom 0.5 🇸🇪",
+    "Space scene in Van Gogh style 🖼️",
+    "Cityscape at night in cyberpunk style 🏙️",
+    "Make sure to add to your prompt as much details as possible", 
+    "Have fun 😊"
   ];
 
   async function animateMessage(message) {
